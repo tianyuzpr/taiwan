@@ -1,0 +1,109 @@
+/* 全局重置与基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", "微软雅黑", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #f8f9fa;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 标题样式 - 突出核心主题 */
+h1 {
+    font-size: 2.2rem;
+    color: #d32f2f;
+    text-align: center;
+    margin: 30px 0 40px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #d32f2f;
+    font-weight: 700;
+}
+
+/* 段落样式 - 保证阅读舒适度 */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: justify;
+    text-indent: 2em; /* 首行缩进，符合中文阅读习惯 */
+    color: #ff0000
+}
+
+/* 特殊段落处理（声明部分） */
+p:last-of-type {
+    color: #666;
+    font-size: 1rem;
+    text-align: right;
+    text-indent: 0;
+    margin-top: 40px;
+    font-style: italic;
+}
+
+/* 响应式设计 - 适配移动设备 */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+        line-height: 1.6;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin: 20px 0 30px;
+        padding-bottom: 10px;
+    }
+
+    p {
+        font-size: 1rem;
+        text-indent: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    p:last-of-type {
+        font-size: 0.9rem;
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+
+/* 打印样式优化 */
+@media print {
+    body {
+        background-color: #fff;
+        padding: 0;
+        font-size: 12pt;
+    }
+
+    h1 {
+        color: #000;
+        border-bottom-color: #000;
+    }
+
+    p {
+        color: #000;
+        margin-bottom: 12px;
+    }
+}
+
+/* 繁体中文/英文适配调整 */
+html[lang="zh-TW"] body {
+    font-family: "Microsoft JhengHei", "微軟正黑體", "PingFang TC", "Helvetica Neue", Arial, sans-serif;
+}
+
+html[lang="en-US"] body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html[lang="en-US"] p {
+    text-indent: 0; /* 英文不首行缩进，符合英文阅读习惯 */
+    line-height: 1.7;
+}
+
+html[lang="en-US"] h1 {
+    font-size: 2rem;
+}
